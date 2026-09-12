@@ -4,7 +4,7 @@ Análise dos óbitos causados por acidentes com motocicletas e motonetas no muni
 
 ## Stack
 
-- **Python** (pandas, matplotlib, seaborn) — coleta, tratamento e validação dos dados
+- **Python** (pandas, matplotlib, seaborn) - coleta, tratamento e validação dos dados
 - **BigQuery** - armazenamento e análise
 - **Looker Studio** - dashboard interativo
 - **Base dos Dados** - fonte dos dados públicos (SIM/MS e DENATRAN)
