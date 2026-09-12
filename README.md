@@ -1,4 +1,4 @@
-# Mortalidade em Acidentes com Motocicletas - Rio de Janeiro (2003–2024)
+## Mortalidade em Acidentes com Motocicletas - Rio de Janeiro (2003-2024)
 
 Análise dos óbitos causados por acidentes com motocicletas e motonetas no município do Rio de Janeiro, cruzando dados de mortalidade, frota de veículos e população.
 
