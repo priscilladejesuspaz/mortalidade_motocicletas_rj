@@ -1,13 +1,13 @@
-# Mortalidade em Acidentes com Motocicletas — Rio de Janeiro (2003–2024)
+# Mortalidade em Acidentes com Motocicletas - Rio de Janeiro (2003–2024)
 
 Análise dos óbitos causados por acidentes com motocicletas e motonetas no município do Rio de Janeiro, cruzando dados de mortalidade, frota de veículos e população.
 
 ## Stack
 
 - **Python** (pandas, matplotlib, seaborn) — coleta, tratamento e validação dos dados
-- **BigQuery** — armazenamento e análise
-- **Looker Studio** — dashboard interativo
-- **Base dos Dados** — fonte dos dados públicos (SIM/MS e DENATRAN)
+- **BigQuery** - armazenamento e análise
+- **Looker Studio** - dashboard interativo
+- **Base dos Dados** - fonte dos dados públicos (SIM/MS e DENATRAN)
 
 ## Dashboard
 
@@ -18,18 +18,18 @@ Análise dos óbitos causados por acidentes com motocicletas e motonetas no muni
 
 O projeto segue um fluxo em 3 camadas dentro do BigQuery:
 
-1. **Views** (`vw_*`) — dados brutos filtrados diretamente da Base dos Dados
-2. **Tabelas tratadas** (`vw_*_ready`) — dados validados e limpos pelos scripts Python
-3. **Tabelas de análise** (`tb_*`) — resultado final das agregações, usadas diretamente no dashboard do Looker Studio
+1. **Views** (`vw_*`) - dados brutos filtrados diretamente da Base dos Dados
+2. **Tabelas tratadas** (`vw_*_ready`) - dados validados e limpos pelos scripts Python
+3. **Tabelas de análise** (`tb_*`) - resultado final das agregações, usadas diretamente no dashboard do Looker Studio
 
 <img width="1423" height="575" alt="Captura de tela 2026-09-11 205703" src="https://github.com/user-attachments/assets/4619f156-fae1-4219-b011-92f85f1cd371" />
 
 ## Estrutura
 
-- `scripts/dados_frota.py` — tratamento dos dados de frota (DENATRAN)
-- `scripts/dados_mortalidade.py` — tratamento dos dados de óbitos (SIM/MS)
-- `scripts/dados_populacao.py` — tratamento dos dados populacionais
-- `scripts/analytics_motociclistas_rj.py` — análise e exportação das tabelas finais para o BigQuery
+- `scripts/dados_frota.py` - tratamento dos dados de frota (DENATRAN)
+- `scripts/dados_mortalidade.py` - tratamento dos dados de óbitos (SIM/MS)
+- `scripts/dados_populacao.py` - tratamento dos dados populacionais
+- `scripts/analytics_motociclistas_rj.py` - análise e exportação das tabelas finais para o BigQuery
 
 ## Principais achados
 
@@ -41,6 +41,6 @@ O projeto segue um fluxo em 3 camadas dentro do BigQuery:
 
 ## Fonte dos dados
 
-- **SIM/MS** — Sistema de Informações sobre Mortalidade (CID-10: V20–V29)
-- **DENATRAN** — Frota de veículos por município
+- **SIM/MS** - Sistema de Informações sobre Mortalidade (CID-10: V20–V29)
+- **DENATRAN** - Frota de veículos por município
 - Acesso via [Base dos Dados](https://basedosdados.org)
