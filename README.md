@@ -22,7 +22,7 @@ O projeto segue um fluxo em 3 camadas dentro do BigQuery:
 2. **Tabelas tratadas** (`vw_*_ready`) — dados validados e limpos pelos scripts Python
 3. **Tabelas de análise** (`tb_*`) — resultado final das agregações, usadas diretamente no dashboard do Looker Studio
 
-![BigQuery](assets/bigquery.png)
+<img width="1423" height="575" alt="Captura de tela 2026-09-11 205703" src="https://github.com/user-attachments/assets/4619f156-fae1-4219-b011-92f85f1cd371" />
 
 ## Estrutura
 
