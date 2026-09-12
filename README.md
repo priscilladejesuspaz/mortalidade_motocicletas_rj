@@ -4,7 +4,7 @@ Análise dos óbitos causados por acidentes com motocicletas e motonetas no muni
 
 ## Stack
 
-- **Python** — coleta, tratamento e validação dos dados
+- **Python** (pandas, matplotlib, seaborn) — coleta, tratamento e validação dos dados
 - **BigQuery** — armazenamento e análise
 - **Looker Studio** — dashboard interativo
 - **Base dos Dados** — fonte dos dados públicos (SIM/MS e DENATRAN)
@@ -14,12 +14,22 @@ Análise dos óbitos causados por acidentes com motocicletas e motonetas no muni
 ![Dashboard](assets/dashboard.png)
 ![Insights](assets/insights.png)
 
+## Pipeline de dados (BigQuery)
+
+O projeto segue um fluxo em 3 camadas dentro do BigQuery:
+
+1. **Views** (`vw_*`) — dados brutos filtrados diretamente da Base dos Dados
+2. **Tabelas tratadas** (`vw_*_ready`) — dados validados e limpos pelos scripts Python
+3. **Tabelas de análise** (`tb_*`) — resultado final das agregações, usadas diretamente no dashboard do Looker Studio
+
+![BigQuery](assets/bigquery.png)
+
 ## Estrutura
 
 - `scripts/dados_frota.py` — tratamento dos dados de frota (DENATRAN)
 - `scripts/dados_mortalidade.py` — tratamento dos dados de óbitos (SIM/MS)
 - `scripts/dados_populacao.py` — tratamento dos dados populacionais
-- `scripts/analytics_motociclistas_rj.py` — análise e exportação para o BigQuery
+- `scripts/analytics_motociclistas_rj.py` — análise e exportação das tabelas finais para o BigQuery
 
 ## Principais achados
 
